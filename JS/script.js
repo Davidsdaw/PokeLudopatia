@@ -86,16 +86,16 @@
   function anteriores(resultText,userNumber) {
     if(userNumber == parseInt(resultText)){
       if(resultText%2==0){
-        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"../Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
+        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"./Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
       } else {
-        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"../Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
+        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"./Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
       }
       
     }else{
       if(resultText%2==0){
-        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"../Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
+        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"./Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
       } else {
-        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"../Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
+        results.insertAdjacentHTML('afterbegin', '<div class="resultado" style="background-image: url('+"./Assets/Pokes/"+resultText+'.png")"><span class="resultado__numero">'+resultText+'</span></div>');
       }
     }
     userNumber = -1;
