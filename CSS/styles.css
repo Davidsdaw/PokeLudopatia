@@ -155,7 +155,7 @@ body::-webkit-scrollbar {
   background-image: url(../Assets/Pokes/bg.png);
   background-size: cover;
   border-radius: 10px;
-
+  align-items: center;
 }
 .wheel{
   width: 65%;
@@ -174,6 +174,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   padding-right: 40px;
+  height: 600px;
 }
 .marker {
   position: relative;
@@ -190,14 +191,14 @@ body::-webkit-scrollbar {
 
 
 
-.xd{
+.xd {
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 10%;
-  background-color: rgba(78, 22, 64, 0.829);
-  box-shadow: 1px 2px 5px 1px rgb(129, 57, 123);
+  box-shadow: inset 0px 0px 24px 9px rgba(0, 0, 0, 0.56);
+  background-color: var(--primary-color);
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px 0px;
   color: white;
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -207,8 +208,9 @@ body::-webkit-scrollbar {
 .xd p {
   margin: 0px;
 }
-.result2{
+.result2 {
   border-radius: 10px;
+  margin: 20px 0px;
   display: flex;
   width: 100%;
   height: 100%;
@@ -218,11 +220,18 @@ body::-webkit-scrollbar {
   color: white;
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-shadow: inset 0px 0px 36px 16px rgba(0, 0, 0, 0.56);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  background-color: var(--primary-color);
+  /* background-image: url(../Assets/Pokes/0.png); */
 }
 .adios{
   border-radius: 10px;
   text-align: center;
-  background-color: rgba(73, 19, 60, 0.7);
+  box-shadow: inset 0px 0px 24px 9px rgba(0, 0, 0, 0.56);
+  background-color: var(--primary-color);
   color: white;
   font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -239,4 +248,67 @@ body::-webkit-scrollbar {
 
 .flexx{
   display: none;
+}
+
+.pokeball {
+background-image: url(../Assets/Pokes/0.png);
+width: 100%;
+height: 100%;
+background-size: 80%;
+background-repeat: no-repeat;
+background-position: center;
+animation: fall 1s ease-in-out;
+}
+
+.ani{
+  animation:
+  shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1.5s 10;
+}
+.ani2{
+  animation: mover 0.1s linear;
+  animation-fill-mode: forwards;
+  animation-direction:alternate;
+}
+@keyframes mover {
+  0%{
+    background-position: -50% 50%;
+  }
+  100%{
+    background-position: 50% 50%;
+  }
+}
+/* Animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-10px) rotate(-20deg);
+  }
+  30% {
+    transform: translateX(10px) rotate(20deg);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(10px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
